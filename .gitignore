@@ -1,0 +1,36 @@
+# Compiled and build artifacts
+*.css.map
+*.js.map
+*.min.css
+*.min.js
+dist/
+build/
+*.o
+*.obj
+
+# Dependencies
+node_modules/
+vendor/
+
+# Logs and temp files
+*.log
+*.tmp
+*.swp
+
+# Editors
+.vscode/
+.idea/
+
+# Environment
+.env
+.env.local
+*.env.*
+
+# Coverage and testing
+coverage/
+htmlcov/
+.coverage
+
+# OS generated files
+.DS_Store
+Thumbs.db

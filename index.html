@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>COFFEE CO. | Premium Artisan Coffee - From Bean to Cup</title>
+  <meta name="description" content="Discover exceptional single-origin coffees and artisan blends. Experience the journey from farm to cup with our premium selection.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Tailwind Config -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            espresso: {
+              900: '#1a120b',
+              800: '#2d1f14',
+              700: '#3d2a1d',
+            },
+            amber: {
+              500: '#d4a574',
+              400: '#e5c59a',
+            },
+            cream: {
+              100: '#f5f0eb',
+            }
+          },
+          fontFamily: {
+            display: ['Playfair Display', 'Georgia', 'serif'],
+            body: ['Inter', 'system-ui', 'sans-serif'],
+          },
+          animation: {
+            'fade-in': 'fadeIn 0.5s ease-in-out',
+            'slide-up': 'slideUp 0.3s ease-out',
+          },
+          keyframes: {
+            fadeIn: {
+              '0%': { opacity: '0' },
+              '100%': { opacity: '1' },
+            },
+            slideUp: {
+              '0%': { transform: 'translateY(20px)', opacity: '0' },
+              '100%': { transform: 'translateY(0)', opacity: '1' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+  
+  <style>
+    /* Additional page-specific styles */
+    .hero-gradient {
+      background: linear-gradient(to bottom, rgba(26,18,11,0.3), rgba(26,18,11,0.8));
+    }
+    
+    .parallax-hero {
+      background-image: url('https://images.unsplash.com/photo-1497935586351-b67a49e012bf?w=1920&h=1080&fit=crop');
+      background-attachment: fixed;
+      background-position: center;
+      background-size: cover;
+    }
+  </style>
+</head>
+<body class="bg-espresso-900 text-cream-100 font-body antialiased">
+
+  <!-- Navigation -->
+  <nav id="main-navbar" class="fixed w-full top-0 z-50 transition-all duration-300 py-4">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between">
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center space-x-2">
+          <span class="text-3xl font-display font-bold text-amber-500">COFFEE CO.</span>
+        </a>
+        
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex items-center space-x-8">
+          <div class="relative group">
+            <button class="text-cream-100 hover:text-amber-500 transition-colors duration-300 flex items-center space-x-1">
+              <span>Shop</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </button>
+            <!-- Mega Menu -->
+            <div class="mega-menu grid grid-cols-4 gap-8 p-8">
+              <div>
+                <h4 class="text-amber-500 font-semibold mb-4 uppercase tracking-wider text-sm">Single Origin</h4>
+                <ul class="space-y-2">
+                  <li><a href="shop.html" class="text-cream-100 hover:text-amber-500 transition-colors">Ethiopia</a></li>
+                  <li><a href="shop.html" class="text-cream-100 hover:text-amber-500 transition-colors">Colombia</a></li>
+                  <li><a href="shop.html" class="text-cream-100 hover:text-amber-500 transition-colors">Kenya</a></li>
+                  <li><a href="shop.html" class="text-cream-100 hover:text-amber-500 transition-colors">Brazil</a></li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="text-amber-500 font-semibold mb-4 uppercase tracking-wider text-sm">Blends</h4>
+                <ul class="space-y-2">
+                  <li><a href="shop.html" class="text-cream-100 hover:text-amber-500 transition-colors">House Blend</a></li>
+                  <li><a href="shop.html" class="text-cream-100 hover:text-amber-500 transition-colors">Espresso Blend</a></li>
+                  <li><a href="shop.html" class="text-cream-100 hover:text-amber-500 transition-colors">Breakfast Blend</a></li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="text-amber-500 font-semibold mb-4 uppercase tracking-wider text-sm">Equipment</h4>
+                <ul class="space-y-2">
+                  <li><a href="shop.html" class="text-cream-100 hover:text-amber-500 transition-colors">Pour Over</a></li>
+                  <li><a href="shop.html" class="text-cream-100 hover:text-amber-500 transition-colors">French Press</a></li>
+                  <li><a href="shop.html" class="text-cream-100 hover:text-amber-500 transition-colors">Grinders</a></li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="text-amber-500 font-semibold mb-4 uppercase tracking-wider text-sm">Subscriptions</h4>
+                <ul class="space-y-2">
+                  <li><a href="shop.html" class="text-cream-100 hover:text-amber-500 transition-colors">Monthly Delivery</a></li>
+                  <li><a href="shop.html" class="text-cream-100 hover:text-amber-500 transition-colors">Customize Plan</a></li>
+                  <li><a href="shop.html" class="text-cream-100 hover:text-amber-500 transition-colors">Gift Subscription</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <a href="learn.html" class="text-cream-100 hover:text-amber-500 transition-colors duration-300">Learn</a>
+          <a href="#story" class="text-cream-100 hover:text-amber-500 transition-colors duration-300">Our Story</a>
+          <a href="#quiz" class="text-cream-100 hover:text-amber-500 transition-colors duration-300">Coffee Quiz</a>
+        </div>
+        
+        <!-- Cart & Mobile Menu -->
+        <div class="flex items-center space-x-4">
+          <button class="relative text-cream-100 hover:text-amber-500 transition-colors">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
+            <span class="absolute -top-2 -right-2 bg-amber-500 text-espresso-900 text-xs w-5 h-5 rounded-full flex items-center justify-center font-bold">0</span>
+          </button>
+          
+          <button id="mobile-menu-btn" class="md:hidden text-cream-100">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-espresso-800 border-t border-espresso-700">
+      <div class="px-4 py-4 space-y-4">
+        <a href="shop.html" class="block text-cream-100 hover:text-amber-500">Shop</a>
+        <a href="learn.html" class="block text-cream-100 hover:text-amber-500">Learn</a>
+        <a href="#story" class="block text-cream-100 hover:text-amber-500">Our Story</a>
+        <a href="#quiz" class="block text-cream-100 hover:text-amber-500">Coffee Quiz</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="relative h-screen parallax-hero flex items-center justify-center">
+    <div class="absolute inset-0 hero-gradient"></div>
+    <div class="relative z-10 text-center px-4 max-w-5xl mx-auto">
+      <p class="text-amber-500 uppercase tracking-[0.3em] mb-6 animate-fade-in">Artisan Roasted Coffee</p>
+      <h1 class="text-5xl md:text-7xl lg:text-8xl font-display font-bold mb-8 text-shadow animate-fade-in">
+        Elevate Your<br/>
+        <span class="text-gradient">Coffee Experience</span>
+      </h1>
+      <p class="text-xl md:text-2xl text-cream-100/80 mb-12 max-w-3xl mx-auto font-light">
+        Discover exceptional single-origin coffees sourced directly from sustainable farms across the globe.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="shop.html" class="btn-primary">Explore Our Collection</a>
+        <a href="#story" class="btn-secondary">Our Journey</a>
+      </div>
+    </div>
+    
+    <!-- Scroll Indicator -->
+    <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <svg class="w-6 h-6 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+    </div>
+  </section>
+
+  <!-- Brand Value / Story Section -->
+  <section id="story" class="py-24 bg-espresso-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <p class="text-amber-500 uppercase tracking-wider mb-4">From Bean to Cup</p>
+        <h2 class="text-4xl md:text-5xl font-display font-bold mb-6">The Journey of Excellence</h2>
+        <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+          Every cup tells a story. We work directly with farmers to ensure quality, sustainability, and fair compensation at every step.
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <!-- Step 1 -->
+        <div class="text-center group">
+          <div class="w-24 h-24 mx-auto mb-6 rounded-full bg-espresso-800 border-2 border-amber-500/30 group-hover:border-amber-500 transition-colors duration-500 flex items-center justify-center">
+            <svg class="w-12 h-12 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
+          </div>
+          <h3 class="text-xl font-display font-semibold mb-3">Sourcing</h3>
+          <p class="text-gray-400">Direct partnerships with farmers in Ethiopia, Colombia, Kenya, and beyond.</p>
+        </div>
+        
+        <!-- Step 2 -->
+        <div class="text-center group">
+          <div class="w-24 h-24 mx-auto mb-6 rounded-full bg-espresso-800 border-2 border-amber-500/30 group-hover:border-amber-500 transition-colors duration-500 flex items-center justify-center">
+            <svg class="w-12 h-12 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
+          </div>
+          <h3 class="text-xl font-display font-semibold mb-3">Selection</h3>
+          <p class="text-gray-400">Only the finest beans pass our rigorous quality control standards.</p>
+        </div>
+        
+        <!-- Step 3 -->
+        <div class="text-center group">
+          <div class="w-24 h-24 mx-auto mb-6 rounded-full bg-espresso-800 border-2 border-amber-500/30 group-hover:border-amber-500 transition-colors duration-500 flex items-center justify-center">
+            <svg class="w-12 h-12 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"></path></svg>
+          </div>
+          <h3 class="text-xl font-display font-semibold mb-3">Roasting</h3>
+          <p class="text-gray-400">Small-batch roasting in-house to unlock each origin's unique character.</p>
+        </div>
+        
+        <!-- Step 4 -->
+        <div class="text-center group">
+          <div class="w-24 h-24 mx-auto mb-6 rounded-full bg-espresso-800 border-2 border-amber-500/30 group-hover:border-amber-500 transition-colors duration-500 flex items-center justify-center">
+            <svg class="w-12 h-12 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+          </div>
+          <h3 class="text-xl font-display font-semibold mb-3">Delivery</h3>
+          <p class="text-gray-400">Freshly roasted and shipped within 48 hours to preserve peak flavor.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Products Section -->
+  <section class="py-24 bg-espresso-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row justify-between items-end mb-16">
+        <div>
+          <p class="text-amber-500 uppercase tracking-wider mb-4">Curated Selection</p>
+          <h2 class="text-4xl md:text-5xl font-display font-bold">Featured Coffees</h2>
+        </div>
+        <a href="shop.html" class="text-amber-500 hover:text-amber-400 transition-colors mt-4 md:mt-0 flex items-center space-x-2">
+          <span>View All Products</span>
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+        </a>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Product 1 -->
+        <div class="product-card group">
+          <div class="product-card-image relative">
+            <img src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=600&h=600&fit=crop" alt="Ethiopian Yirgacheffe" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-espresso-900/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-3">
+              <a href="shop.html" class="btn-secondary px-4 py-2 text-sm">Quick View</a>
+              <button class="btn-primary px-4 py-2 text-sm">Add to Cart</button>
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="text-amber-500 text-xs uppercase tracking-wider mb-2">Ethiopia • Light Roast</div>
+            <h3 class="text-xl font-display mb-3">Ethiopian Yirgacheffe</h3>
+            <div class="flex items-center justify-between">
+              <div class="text-2xl">$24.99</div>
+              <button class="text-amber-500 hover:text-amber-400 transition-colors">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Product 2 -->
+        <div class="product-card group">
+          <div class="product-card-image relative">
+            <img src="https://images.unsplash.com/photo-1611854779393-1b2ae9d7d20b?w=600&h=600&fit=crop" alt="Colombian Supremo" class="w-full h-full object-cover">
+            <span class="absolute top-3 right-3 bg-red-600 text-white px-3 py-1 text-sm font-bold">-10%</span>
+            <div class="absolute inset-0 bg-espresso-900/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-3">
+              <a href="shop.html" class="btn-secondary px-4 py-2 text-sm">Quick View</a>
+              <button class="btn-primary px-4 py-2 text-sm">Add to Cart</button>
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="text-amber-500 text-xs uppercase tracking-wider mb-2">Colombia • Medium Roast</div>
+            <h3 class="text-xl font-display mb-3">Colombian Supremo</h3>
+            <div class="flex items-center justify-between">
+              <div class="text-2xl">$22.99</div>
+              <button class="text-amber-500 hover:text-amber-400 transition-colors">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Product 3 -->
+        <div class="product-card group">
+          <div class="product-card-image relative">
+            <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=600&h=600&fit=crop" alt="Sumatra Mandheling" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-espresso-900/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-3">
+              <a href="shop.html" class="btn-secondary px-4 py-2 text-sm">Quick View</a>
+              <button class="btn-primary px-4 py-2 text-sm">Add to Cart</button>
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="text-amber-500 text-xs uppercase tracking-wider mb-2">Indonesia • Dark Roast</div>
+            <h3 class="text-xl font-display mb-3">Sumatra Mandheling</h3>
+            <div class="flex items-center justify-between">
+              <div class="text-2xl">$26.99</div>
+              <button class="text-amber-500 hover:text-amber-400 transition-colors">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Coffee Quiz Section -->
+  <section id="quiz" class="py-24 bg-espresso-900">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <p class="text-amber-500 uppercase tracking-wider mb-4">Find Your Perfect Match</p>
+        <h2 class="text-4xl md:text-5xl font-display font-bold mb-6">Coffee Personality Quiz</h2>
+        <p class="text-xl text-gray-400">
+          Answer three simple questions and we'll recommend the perfect coffee for your palate.
+        </p>
+      </div>
+      
+      <div id="quiz-container" class="bg-espresso-800 border border-espresso-700 p-8 md:p-12">
+        <!-- Quiz content will be dynamically loaded by JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter Section -->
+  <section class="py-24 bg-espresso-800">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl md:text-4xl font-display font-bold mb-4">Join the Coffee Community</h2>
+      <p class="text-gray-400 mb-8">Subscribe to receive brewing tips, exclusive offers, and early access to new arrivals.</p>
+      <form class="flex flex-col sm:flex-row gap-4 max-w-xl mx-auto">
+        <input type="email" placeholder="Enter your email" class="flex-1 bg-espresso-900 border border-espresso-700 px-6 py-3 focus:outline-none focus:border-amber-500 transition-colors">
+        <button type="submit" class="btn-primary whitespace-nowrap">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-espresso-900 border-t border-espresso-700 pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+        <!-- Column 1 -->
+        <div>
+          <span class="text-2xl font-display font-bold text-amber-500 mb-6 block">COFFEE CO.</span>
+          <p class="text-gray-400 mb-6">Premium artisan coffee roasted with passion and delivered fresh to your door.</p>
+          <div class="flex space-x-4">
+            <a href="#" class="text-gray-400 hover:text-amber-500 transition-colors">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-amber-500 transition-colors">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-amber-500 transition-colors">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"/></svg>
+            </a>
+          </div>
+        </div>
+        
+        <!-- Column 2 -->
+        <div>
+          <h4 class="text-amber-500 font-semibold mb-6 uppercase tracking-wider text-sm">Shop</h4>
+          <ul class="space-y-3">
+            <li><a href="shop.html" class="text-gray-400 hover:text-amber-500 transition-colors">Single Origin</a></li>
+            <li><a href="shop.html" class="text-gray-400 hover:text-amber-500 transition-colors">Blends</a></li>
+            <li><a href="shop.html" class="text-gray-400 hover:text-amber-500 transition-colors">Equipment</a></li>
+            <li><a href="shop.html" class="text-gray-400 hover:text-amber-500 transition-colors">Subscriptions</a></li>
+            <li><a href="shop.html" class="text-gray-400 hover:text-amber-500 transition-colors">Gift Cards</a></li>
+          </ul>
+        </div>
+        
+        <!-- Column 3 -->
+        <div>
+          <h4 class="text-amber-500 font-semibold mb-6 uppercase tracking-wider text-sm">Learn</h4>
+          <ul class="space-y-3">
+            <li><a href="learn.html" class="text-gray-400 hover:text-amber-500 transition-colors">Brewing Guides</a></li>
+            <li><a href="learn.html" class="text-gray-400 hover:text-amber-500 transition-colors">Coffee Origins</a></li>
+            <li><a href="learn.html" class="text-gray-400 hover:text-amber-500 transition-colors">Roasting Process</a></li>
+            <li><a href="learn.html" class="text-gray-400 hover:text-amber-500 transition-colors">FAQ</a></li>
+          </ul>
+        </div>
+        
+        <!-- Column 4 -->
+        <div>
+          <h4 class="text-amber-500 font-semibold mb-6 uppercase tracking-wider text-sm">Company</h4>
+          <ul class="space-y-3">
+            <li><a href="#story" class="text-gray-400 hover:text-amber-500 transition-colors">Our Story</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-amber-500 transition-colors">Sustainability</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-amber-500 transition-colors">Careers</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-amber-500 transition-colors">Contact</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-amber-500 transition-colors">Wholesale</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="border-t border-espresso-700 pt-8 flex flex-col md:flex-row justify-between items-center">
+        <p class="text-gray-500 text-sm mb-4 md:mb-0">&copy; 2024 COFFEE CO. All rights reserved.</p>
+        <div class="flex space-x-6 text-sm text-gray-500">
+          <a href="#" class="hover:text-amber-500 transition-colors">Privacy Policy</a>
+          <a href="#" class="hover:text-amber-500 transition-colors">Terms of Service</a>
+          <a href="#" class="hover:text-amber-500 transition-colors">Shipping Info</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

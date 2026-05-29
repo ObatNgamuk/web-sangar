@@ -1,0 +1,106 @@
+/* 
+ * COFFEE CO. - Enterprise Design System
+ * Premium Coffee Brand - Tailwind CSS Custom Configuration
+ */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Color Palette - Rich Espresso & Warm Amber */
+    --color-espresso-900: #1a120b;
+    --color-espresso-800: #2d1f14;
+    --color-espresso-700: #3d2a1d;
+    --color-amber-500: #d4a574;
+    --color-amber-400: #e5c59a;
+    --color-cream-100: #f5f0eb;
+    --color-ivory-200: #faf8f5;
+    --color-offwhite-300: #ede9e4;
+    
+    /* Typography */
+    --font-display: 'Playfair Display', Georgia, serif;
+    --font-body: 'Inter', system-ui, sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-espresso-900 text-cream-100 font-body antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
+
+@layer components {
+  /* Glassmorphism Navbar */
+  .glass-nav {
+    @apply backdrop-blur-md bg-espresso-900/80 border-b border-espresso-700/50 sticky top-0 z-50 transition-all duration-300;
+  }
+
+  /* Premium Button Styles */
+  .btn-primary {
+    @apply bg-amber-500 hover:bg-amber-400 text-espresso-900 font-semibold px-8 py-3 rounded-none transition-all duration-300 ease-in-out transform hover:scale-105;
+  }
+
+  .btn-secondary {
+    @apply border-2 border-amber-500 text-amber-500 hover:bg-amber-500 hover:text-espresso-900 font-semibold px-8 py-3 rounded-none transition-all duration-300 ease-in-out;
+  }
+
+  /* Product Card */
+  .product-card {
+    @apply bg-espresso-800 border border-espresso-700 overflow-hidden group transition-all duration-500 ease-in-out hover:border-amber-500/50;
+  }
+
+  .product-card-image {
+    @apply relative overflow-hidden bg-espresso-700 aspect-square transition-all duration-500 group-hover:scale-110;
+  }
+
+  /* Mega Menu */
+  .mega-menu {
+    @apply absolute left-0 w-full bg-espresso-800/95 backdrop-blur-lg border-t border-espresso-700 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-in-out;
+  }
+
+  /* Section Divider */
+  .section-divider {
+    @apply h-px bg-gradient-to-r from-transparent via-amber-500/30 to-transparent my-16;
+  }
+
+  /* Interactive Quiz Widget */
+  .quiz-option {
+    @apply p-4 border border-espresso-700 cursor-pointer transition-all duration-300 hover:border-amber-500 hover:bg-espresso-700/50;
+  }
+
+  .quiz-option.selected {
+    @apply border-amber-500 bg-amber-500/10;
+  }
+
+  /* Brewing Timer */
+  .timer-display {
+    @apply font-mono text-6xl md:text-8xl text-amber-500 tracking-wider;
+  }
+
+  /* Loading Animation */
+  .coffee-loader {
+    @apply animate-pulse;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-amber-400 to-amber-600 bg-clip-text text-transparent;
+  }
+
+  .parallax-bg {
+    @apply bg-fixed bg-center bg-cover;
+  }
+
+  .text-shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+}
