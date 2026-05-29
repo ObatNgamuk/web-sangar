@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop | COFFEE CO. - Premium Coffee Collection</title>
+  <meta name="description" content="Browse our curated selection of single-origin coffees, artisan blends, and premium brewing equipment.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Tailwind Config -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            espresso: {
+              900: '#1a120b',
+              800: '#2d1f14',
+              700: '#3d2a1d',
+            },
+            amber: {
+              500: '#d4a574',
+              400: '#e5c59a',
+            },
+            cream: {
+              100: '#f5f0eb',
+            }
+          },
+          fontFamily: {
+            display: ['Playfair Display', 'Georgia', 'serif'],
+            body: ['Inter', 'system-ui', 'sans-serif'],
+          },
+          animation: {
+            'fade-in': 'fadeIn 0.5s ease-in-out',
+            'slide-up': 'slideUp 0.3s ease-out',
+          },
+          keyframes: {
+            fadeIn: {
+              '0%': { opacity: '0' },
+              '100%': { opacity: '1' },
+            },
+            slideUp: {
+              '0%': { transform: 'translateY(20px)', opacity: '0' },
+              '100%': { transform: 'translateY(0)', opacity: '1' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="bg-espresso-900 text-cream-100 font-body antialiased">
+
+  <!-- Navigation (Same as index.html) -->
+  <nav id="main-navbar" class="fixed w-full top-0 z-50 transition-all duration-300 py-4">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between">
+        <a href="index.html" class="flex items-center space-x-2">
+          <span class="text-3xl font-display font-bold text-amber-500">COFFEE CO.</span>
+        </a>
+        
+        <div class="hidden md:flex items-center space-x-8">
+          <div class="relative group">
+            <button class="text-amber-500 transition-colors duration-300 flex items-center space-x-1">
+              <span>Shop</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </button>
+            <div class="mega-menu grid grid-cols-4 gap-8 p-8">
+              <div>
+                <h4 class="text-amber-500 font-semibold mb-4 uppercase tracking-wider text-sm">Single Origin</h4>
+                <ul class="space-y-2">
+                  <li><a href="#" class="text-cream-100 hover:text-amber-500 transition-colors">Ethiopia</a></li>
+                  <li><a href="#" class="text-cream-100 hover:text-amber-500 transition-colors">Colombia</a></li>
+                  <li><a href="#" class="text-cream-100 hover:text-amber-500 transition-colors">Kenya</a></li>
+                  <li><a href="#" class="text-cream-100 hover:text-amber-500 transition-colors">Brazil</a></li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="text-amber-500 font-semibold mb-4 uppercase tracking-wider text-sm">Blends</h4>
+                <ul class="space-y-2">
+                  <li><a href="#" class="text-cream-100 hover:text-amber-500 transition-colors">House Blend</a></li>
+                  <li><a href="#" class="text-cream-100 hover:text-amber-500 transition-colors">Espresso Blend</a></li>
+                  <li><a href="#" class="text-cream-100 hover:text-amber-500 transition-colors">Breakfast Blend</a></li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="text-amber-500 font-semibold mb-4 uppercase tracking-wider text-sm">Equipment</h4>
+                <ul class="space-y-2">
+                  <li><a href="#" class="text-cream-100 hover:text-amber-500 transition-colors">Pour Over</a></li>
+                  <li><a href="#" class="text-cream-100 hover:text-amber-500 transition-colors">French Press</a></li>
+                  <li><a href="#" class="text-cream-100 hover:text-amber-500 transition-colors">Grinders</a></li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="text-amber-500 font-semibold mb-4 uppercase tracking-wider text-sm">Subscriptions</h4>
+                <ul class="space-y-2">
+                  <li><a href="#" class="text-cream-100 hover:text-amber-500 transition-colors">Monthly Delivery</a></li>
+                  <li><a href="#" class="text-cream-100 hover:text-amber-500 transition-colors">Customize Plan</a></li>
+                  <li><a href="#" class="text-cream-100 hover:text-amber-500 transition-colors">Gift Subscription</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <a href="learn.html" class="text-cream-100 hover:text-amber-500 transition-colors duration-300">Learn</a>
+          <a href="index.html#story" class="text-cream-100 hover:text-amber-500 transition-colors duration-300">Our Story</a>
+          <a href="index.html#quiz" class="text-cream-100 hover:text-amber-500 transition-colors duration-300">Coffee Quiz</a>
+        </div>
+        
+        <div class="flex items-center space-x-4">
+          <button class="relative text-cream-100 hover:text-amber-500 transition-colors">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
+            <span class="absolute -top-2 -right-2 bg-amber-500 text-espresso-900 text-xs w-5 h-5 rounded-full flex items-center justify-center font-bold">0</span>
+          </button>
+          
+          <button id="mobile-menu-btn" class="md:hidden text-cream-100">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    <div id="mobile-menu" class="hidden md:hidden bg-espresso-800 border-t border-espresso-700">
+      <div class="px-4 py-4 space-y-4">
+        <a href="shop.html" class="block text-amber-500">Shop</a>
+        <a href="learn.html" class="block text-cream-100 hover:text-amber-500">Learn</a>
+        <a href="index.html#story" class="block text-cream-100 hover:text-amber-500">Our Story</a>
+        <a href="index.html#quiz" class="block text-cream-100 hover:text-amber-500">Coffee Quiz</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="pt-32 pb-16 bg-espresso-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center">
+        <h1 class="text-4xl md:text-5xl font-display font-bold mb-4">Our Collection</h1>
+        <p class="text-xl text-gray-400 max-w-2xl mx-auto">Discover exceptional coffees from the world's finest growing regions, carefully selected and roasted to perfection.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Shop Section with Filters -->
+  <section class="py-12 bg-espresso-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col lg:flex-row gap-8">
+        
+        <!-- Sidebar Filters -->
+        <aside class="lg:w-64 flex-shrink-0">
+          <div class="sticky top-24 space-y-8">
+            <!-- Search -->
+            <div>
+              <label class="block text-sm uppercase tracking-wider text-amber-500 mb-3">Search</label>
+              <input type="text" id="search-input" placeholder="Search coffees..." class="w-full bg-espresso-800 border border-espresso-700 px-4 py-3 focus:outline-none focus:border-amber-500 transition-colors">
+            </div>
+            
+            <!-- Filter by Origin -->
+            <div>
+              <label class="block text-sm uppercase tracking-wider text-amber-500 mb-3">Origin</label>
+              <select id="filter-origin" class="w-full bg-espresso-800 border border-espresso-700 px-4 py-3 focus:outline-none focus:border-amber-500 transition-colors appearance-none cursor-pointer">
+                <option value="all">All Origins</option>
+                <option value="ethiopia">Ethiopia</option>
+                <option value="colombia">Colombia</option>
+                <option value="kenya">Kenya</option>
+                <option value="brazil">Brazil</option>
+                <option value="indonesia">Indonesia</option>
+                <option value="guatemala">Guatemala</option>
+                <option value="costa-rica">Costa Rica</option>
+                <option value="blend">Multi-Origin Blend</option>
+              </select>
+            </div>
+            
+            <!-- Filter by Roast Level -->
+            <div>
+              <label class="block text-sm uppercase tracking-wider text-amber-500 mb-3">Roast Level</label>
+              <select id="filter-roast" class="w-full bg-espresso-800 border border-espresso-700 px-4 py-3 focus:outline-none focus:border-amber-500 transition-colors appearance-none cursor-pointer">
+                <option value="all">All Roasts</option>
+                <option value="light">Light Roast</option>
+                <option value="medium">Medium Roast</option>
+                <option value="dark">Dark Roast</option>
+              </select>
+            </div>
+            
+            <!-- Filter by Price -->
+            <div>
+              <label class="block text-sm uppercase tracking-wider text-amber-500 mb-3">Price Range</label>
+              <select id="filter-price" class="w-full bg-espresso-800 border border-espresso-700 px-4 py-3 focus:outline-none focus:border-amber-500 transition-colors appearance-none cursor-pointer">
+                <option value="all">All Prices</option>
+                <option value="low">Under $22</option>
+                <option value="mid">$22 - $26</option>
+                <option value="high">$26+</option>
+              </select>
+            </div>
+            
+            <!-- Reset Filters -->
+            <button onclick="ProductFilter.resetFilters()" class="w-full btn-secondary text-sm">
+              Reset All Filters
+            </button>
+          </div>
+        </aside>
+        
+        <!-- Product Grid -->
+        <main class="flex-1">
+          <!-- Results Count & Sort -->
+          <div class="flex justify-between items-center mb-8">
+            <p class="text-gray-400"><span id="product-count">8</span> products found</p>
+            <select class="bg-espresso-800 border border-espresso-700 px-4 py-2 focus:outline-none focus:border-amber-500 transition-colors">
+              <option>Sort by: Featured</option>
+              <option>Price: Low to High</option>
+              <option>Price: High to Low</option>
+              <option>Name: A-Z</option>
+            </select>
+          </div>
+          
+          <!-- Products -->
+          <div id="product-grid" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+            <!-- Products will be dynamically loaded by JavaScript -->
+          </div>
+        </main>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick View Modal -->
+  <div id="quick-view-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4">
+    <div class="absolute inset-0 bg-espresso-900/90 backdrop-blur-sm"></div>
+    <div class="relative bg-espresso-800 border border-espresso-700 p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+      <button onclick="document.getElementById('quick-view-modal').classList.add('hidden')" class="absolute top-4 right-4 text-gray-400 hover:text-white">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+      </button>
+      <div id="quick-view-content">
+        <!-- Content will be loaded dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer (Same as index.html) -->
+  <footer class="bg-espresso-900 border-t border-espresso-700 pt-16 pb-8 mt-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+        <div>
+          <span class="text-2xl font-display font-bold text-amber-500 mb-6 block">COFFEE CO.</span>
+          <p class="text-gray-400 mb-6">Premium artisan coffee roasted with passion and delivered fresh to your door.</p>
+          <div class="flex space-x-4">
+            <a href="#" class="text-gray-400 hover:text-amber-500 transition-colors">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-amber-500 transition-colors">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+          </div>
+        </div>
+        
+        <div>
+          <h4 class="text-amber-500 font-semibold mb-6 uppercase tracking-wider text-sm">Shop</h4>
+          <ul class="space-y-3">
+            <li><a href="#" class="text-gray-400 hover:text-amber-500 transition-colors">Single Origin</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-amber-500 transition-colors">Blends</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-amber-500 transition-colors">Equipment</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-amber-500 transition-colors">Subscriptions</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="text-amber-500 font-semibold mb-6 uppercase tracking-wider text-sm">Learn</h4>
+          <ul class="space-y-3">
+            <li><a href="learn.html" class="text-gray-400 hover:text-amber-500 transition-colors">Brewing Guides</a></li>
+            <li><a href="learn.html" class="text-gray-400 hover:text-amber-500 transition-colors">Coffee Origins</a></li>
+            <li><a href="learn.html" class="text-gray-400 hover:text-amber-500 transition-colors">Roasting Process</a></li>
+            <li><a href="learn.html" class="text-gray-400 hover:text-amber-500 transition-colors">FAQ</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="text-amber-500 font-semibold mb-6 uppercase tracking-wider text-sm">Company</h4>
+          <ul class="space-y-3">
+            <li><a href="index.html#story" class="text-gray-400 hover:text-amber-500 transition-colors">Our Story</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-amber-500 transition-colors">Sustainability</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-amber-500 transition-colors">Careers</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-amber-500 transition-colors">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="border-t border-espresso-700 pt-8 flex flex-col md:flex-row justify-between items-center">
+        <p class="text-gray-500 text-sm mb-4 md:mb-0">&copy; 2024 COFFEE CO. All rights reserved.</p>
+        <div class="flex space-x-6 text-sm text-gray-500">
+          <a href="#" class="hover:text-amber-500 transition-colors">Privacy Policy</a>
+          <a href="#" class="hover:text-amber-500 transition-colors">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/app.js"></script>
+  <script>
+    // Add reset filters function
+    ProductFilter.resetFilters = function() {
+      document.getElementById('search-input').value = '';
+      document.getElementById('filter-origin').value = 'all';
+      document.getElementById('filter-roast').value = 'all';
+      document.getElementById('filter-price').value = 'all';
+      this.filterProducts();
+    };
+  </script>
+</body>
+</html>
